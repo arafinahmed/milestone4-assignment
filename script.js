@@ -42,23 +42,20 @@ function totalTickets(inputFormId) {
     }
 }
 
-const book = document.getElementById('book-now');
-book.addEventListener('click', function(){
+function confirmation() {
     const fClassTickets = totalTickets('first-class-count');
     const eClassTickets = totalTickets('economy-class-count');
-    
-    if(fClassTickets+eClassTickets){
+
+    if (fClassTickets + eClassTickets) {
         document.getElementById('f-class-seats').innerText = fClassTickets;
         document.getElementById('e-class-seats').innerText = eClassTickets;
-    
         document.getElementById('total-cost').innerText = document.getElementById('grand-total').innerText;
-    
         document.getElementsByClassName('booking-form')[0].style.display = 'none';
         document.getElementsByClassName('booking-confirm')[0].style.display = 'block';
     }
-    else{
+    else {
         alert('Select your ticket first');
     }
 
-});
+}
 

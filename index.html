@@ -11,7 +11,7 @@
         rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
@@ -42,7 +42,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -52,18 +52,20 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input oninput="counter('first-class-count', 0);" id="first-class-count" class="inp-style inp-width" type="number" name="">
+                    <input oninput="counter('first-class-count', 0);" id="first-class-count" class="inp-style inp-width"
+                        type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="counter('first-class-count', 1);">+</button>
                     <button onclick="counter('first-class-count', -1);">-</button>
                 </div>
             </div>
-            
+
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input oninput="counter('economy-class-count', 0);" id="economy-class-count" class="inp-style inp-width" type="number" name="">
+                    <input oninput="counter('economy-class-count', 0);" id="economy-class-count"
+                        class="inp-style inp-width" type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="counter('economy-class-count', 1);">+</button>
@@ -98,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <button id="book-now" class="btn-style">Book Now</button>
+            <button onclick="confirmation();" class="btn-style">Book Now</button>
         </div>
         <div class="booking-confirm">
             <h2>Your Ticket booking is confirmed...</h2>
@@ -108,12 +110,14 @@
         </div>
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
         </div>
-    </section>
+        </section>
 
-    <!--Thank You-->
-    <script src="script.js"></script>
+        <!--Thank You-->
+        <script src="script.js"></script>
 </body>
 
 </html>
