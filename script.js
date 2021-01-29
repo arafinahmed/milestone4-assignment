@@ -1,21 +1,23 @@
 calculateTotal();
 function counter(inputFormId, count){
     const seatsCount = document.getElementById(inputFormId);
-    let seats = parseInt(seatsCount.value);
-    if(seatsCount.value == ''){
+    let seats = 0;
+    if(seatsCount.value!='')
+    {
+        seats = parseInt(seatsCount.value);
+        seats = seats + count;
+        if(seats<0){
+            seats = 0;        
+        }
+    }
+    else{
         if(count==1){
             seats = 1;        
         }
         else if(count==-1){
             seats = 0;        
         }
-    }
-    else{
-        seats = seats + count;
-    }
-    if(seats<0){
-        seats = 0;        
-    }
+    }    
     seatsCount.value = seats;
     calculateTotal();
 }
