@@ -44,11 +44,21 @@ function totalTickets(inputFormId) {
 
 const book = document.getElementById('book-now');
 book.addEventListener('click', function(){
-    document.getElementById('f-class-seats').innerText = totalTickets('first-class-count');
-    document.getElementById('e-class-seats').innerText = totalTickets('economy-class-count');
-    document.getElementById('total-cost').innerText = document.getElementById('grand-total').innerText;
+    const fClassTickets = totalTickets('first-class-count');
+    const eClassTickets = totalTickets('economy-class-count');
+    
+    if(fClassTickets+eClassTickets){
+        document.getElementById('f-class-seats').innerText = fClassTickets;
+        document.getElementById('e-class-seats').innerText = eClassTickets;
+    
+        document.getElementById('total-cost').innerText = document.getElementById('grand-total').innerText;
+    
+        document.getElementsByClassName('booking-form')[0].style.display = 'none';
+        document.getElementsByClassName('booking-confirm')[0].style.display = 'block';
+    }
+    else{
+        alert('Select your ticket first');
+    }
 
-    document.getElementsByClassName('booking-form')[0].style.display = 'none';
-    document.getElementsByClassName('booking-confirm')[0].style.display = 'block';
 });
 
