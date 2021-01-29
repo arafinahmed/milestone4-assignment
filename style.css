@@ -50,6 +50,7 @@ nav ul li a:hover, a.active{
     padding: 25px;
     border-radius: 5px;
     float: left;
+    /* display: none; */
 }
 .booking-form h3{
     margin: 10px 0px;
@@ -128,4 +129,10 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+
+
+.booking-confirm{
+    display: none;
+    color: white;
 }
